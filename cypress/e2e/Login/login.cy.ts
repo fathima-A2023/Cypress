@@ -8,6 +8,7 @@ describe ('Xyicon Login', () =>{
 
     it('Login with a valid username and password', () => {
         cy.get('#userName').type('aaminaamanulla')
-        cy.get('#pwInput').type('')
+        cy.get('#pwInput').type('#Aaminaaman24225')
+        cy.get('#appHolder').find('.Button.primary.loginButton').click()
     })
 })
