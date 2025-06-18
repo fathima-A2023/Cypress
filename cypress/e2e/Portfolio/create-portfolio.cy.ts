@@ -28,10 +28,11 @@ describe ('Create Portfolio', () => {
 
     const portfolioNavBtn = new NavigationPanel();
     const createPortfolio = new Portfolios();
+    const name = 'Test_user' + Date.now();
     it('click on the portfolios button in the nav panel', () => {     
         portfolioNavBtn.navigateToPortfolios();
         createPortfolio.closeDetailsPanel();
-        createPortfolio.createPortfolio('automation');
+        createPortfolio.createPortfolio(name);
     })
 
     // it('Close the details panel', () =>{

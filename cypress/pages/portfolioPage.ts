@@ -6,7 +6,7 @@ class Portfolios {
         return cy.get('[data-title="Close"]').first();
     }
 
-    private getCreateBtn (){
+    private getPortfolioCreateBtn (){
         return cy.get('[data-cy="Button.CREATE"]');
     }
 
@@ -14,22 +14,28 @@ class Portfolios {
         return cy.get('.portfolionameInput');
     }
 
-    private getPortfolioType () {
-        return cy.get('.SelectInputDropdownClass');
+    private getPortfolioTypeDropdown () {
+        return cy.get('.element > .SelectInputStyled');
     }
 
-    // private getPortfolioType () {
-    //     return cy.get()
-    // }
+    private selectPortfolioType () {
+        return cy.get('.Options').first();
+    }
+
+    private getCreateBtn () {
+        return cy.get('[data-cy="Button.Create"]')
+    }
 
     closeDetailsPanel (){
         this.getCloseBtn().click({force: true});
     }
 
     createPortfolio(name: string){
-        this.getCreateBtn().click();
+        this.getPortfolioCreateBtn().click();
         this.getPortfolioName().type(name);
-        this.getPortfolioType().select(0);
+        this.getPortfolioTypeDropdown().click();
+        this.selectPortfolioType().click();
+        this.getCreateBtn().click();
     }
 }
 
