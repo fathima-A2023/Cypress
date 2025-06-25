@@ -6,6 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    supportFile: 'cypress/support/e2e.ts'
   },
   env: {
     devapp_url: 'https://devapp.xyicon.com/#auth/login',

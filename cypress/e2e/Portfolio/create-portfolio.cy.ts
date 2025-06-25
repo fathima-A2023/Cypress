@@ -1,6 +1,5 @@
 /// <reference types= "cypress" />
-import LoginPage from "../../pages/loginPage"
-import NavigationPanel from "../../pages/navPage"
+import NavigationPanel from "../../pages/navPage";
 import Portfolios from "../../pages/portfolioPage";
 
 // describe('Create a Portfolio', () =>{
@@ -18,27 +17,14 @@ import Portfolios from "../../pages/portfolioPage";
 // })
 
 describe ('Create Portfolio', () => {
-
-    const loginPage = new LoginPage();
-    before('Xyicon Login',() =>{
-        cy.visit(Cypress.env('qaapp_url'));
-        loginPage.login('aaminaamanulla', '#Aaminaaman24225');
-        Cypress.config();
-    })
-
     const portfolioNavBtn = new NavigationPanel();
     const createPortfolio = new Portfolios();
     const name = 'Test_user' + Date.now();
-    it('click on the portfolios button in the nav panel', () => {     
-        portfolioNavBtn.navigateToPortfolios();
+    it('Create Portfolios', () => {     
+        portfolioNavBtn.navigateToPortfolios(); //click on the portfolios button in the nav panel
         createPortfolio.closeDetailsPanel();
         createPortfolio.createPortfolio(name);
     })
-
-    // it('Close the details panel', () =>{
-        
-    // })
-
 })
 
         
