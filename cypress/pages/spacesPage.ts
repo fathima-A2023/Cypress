@@ -58,8 +58,9 @@ class Spaces {
     }
 
     setScale(){
+        cy.wait(6000)
         this.getSetScale().click();
-        this.getCanvas().wait(3000).dblclick('center', {force:true}).trigger('mousemove', {force: true, x:200, y:200}).trigger("mousedown").trigger('mousemove', {x:250, y:200, force: true}).wait(300).trigger('mouseup', {force:true});
+        this.getCanvas().wait(6000).dblclick('center', {force:true}).trigger('mousemove', {force: true, x:200, y:200}).trigger("mousedown").trigger('mousemove', {x:250, y:200, force: true}).wait(300).trigger('mouseup', {force:true});
         this.getDistanceInputField().type('32');
         this.getApplyAllSpacesCheckBox().click();
         this.getDistanceConfirmBtn().click();
