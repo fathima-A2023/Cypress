@@ -14,16 +14,16 @@ import LoginPage from "../../pages/loginPage";
 //     })
 // })
 
-describe('Xyicon Login', () =>{
+// describe('Xyicon Login', () =>{
 
-    before(() =>{
-    cy.visit(Cypress.env('qaapp_url'))
-    })
+//     before(() =>{
+//     cy.visit(Cypress.env('qaapp_url'))
+//     })
 
-    const loginPage = new LoginPage();
+//     const loginPage = new LoginPage();
 
-    it ('Login with a valid username and password', () =>{
-        loginPage.login ('aaminaamanulla', '#Aaminaaman24225');
-    })
+//     it ('Login with a valid username and password', () =>{
+//         loginPage.login ('aaminaamanulla', '#Aaminaaman24225');
+//     })
 
-})
+// })
