@@ -25,5 +25,9 @@ describe('Xyicon Login', () =>{
     it ('Login with a valid username and password', () =>{
         loginPage.login ('aaminaamanulla', '#Aaminaaman24225');
     })
+    
+    it ('Login with a valid username and password', () =>{
+        loginPage.login ('aaminaamanulla', '#Aaminaaman24225');
+    })
 
 })
