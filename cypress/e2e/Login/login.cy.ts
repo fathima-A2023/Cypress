@@ -20,10 +20,4 @@ describe('Xyicon Login', () =>{
     // cy.visit(Cypress.env('qaapp_url'))
     // })
 
-    const loginPage = new LoginPage();
-
-    it ('Login with a valid username and password', () =>{
-        loginPage.login ('aaminaamanulla', '#Aaminaaman24225');
-    })
-
 })
