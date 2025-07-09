@@ -16,9 +16,9 @@ import LoginPage from "../../pages/loginPage";
 
 // describe('Xyicon Login', () =>{
 
-//     before(() =>{
-//     cy.visit(Cypress.env('qaapp_url'))
-//     })
+ before(() =>{
+     cy.visit(Cypress.env('qaapp_url'))
+   })
 
 //     const loginPage = new LoginPage();
 
